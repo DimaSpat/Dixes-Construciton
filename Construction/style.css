@@ -388,6 +388,7 @@ header a {
     font-size: 20px;
     opacity: 1;
     color: var(--black);
+    background: var(--grey);
 }
 
 #email-container {
@@ -425,6 +426,7 @@ header a {
     outline: none;
     font-size: 20px;
     opacity: 1;
+    background: var(--grey);
     color: var(--black);
 }
 
@@ -464,6 +466,7 @@ header a {
     font-size: 20px;
     opacity: 1;
     color: var(--black);
+    background: var(--grey);
 }
 
 #service-chose-container {
@@ -502,6 +505,7 @@ header a {
     font-size: 20px;
     opacity: 1;
     color: var(--black);
+    background: var(--grey);
 }
 
 #description-project-container {
@@ -540,6 +544,7 @@ header a {
     font-size: 20px;
     opacity: 1;
     color: var(--black);
+    background: var(--white);
 }
 
 #form-submit {
