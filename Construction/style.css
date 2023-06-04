@@ -60,6 +60,8 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
     overflow-y: scroll;
+    
+    text-decoration: none;
 }
 body::-webkit-scrollbar {
     display: none;
@@ -104,6 +106,10 @@ input[type=number]::-webkit-outer-spin-button {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+a {
+    text-decoration: none;
 }
 
 
