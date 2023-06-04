@@ -1,0 +1,566 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(Fonts/Montserrat-Regular.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+@import url('');
+
+:root {
+    --max-width: 1000px;
+    --paddings: 50px;
+
+    /* Main Colors */
+    --white: white;
+    --grey: #f7f7f7;
+    --grey-darker: #ebebeb;
+    --black: #232323;
+
+    /* Background Colors */
+    --header-settings-language-selector-background: #dedede;
+    --header-other-contact-background: #232323;
+
+    /* Text Color */
+    --main-text: var(--black);
+    --header-other-contact-color: var(--white);
+
+    /* Text Size */
+    --text-size-main: 18px;
+    --big-text-size-main: 25px;
+
+    --projects-text-size-main: 50px;
+    --projects-text-size-button: 25px;
+
+    /* Fonts */
+    --main-font: Arial, Helvetica, sans-serif;
+
+    /* Border Radius */
+    --header-setting-language-selector-radius: 10px;
+    --border-radius: 15px;
+
+    /* Padding */
+    --padding-left-contact: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: var(--main-font);
+}
+
+body {
+    margin: 0;
+
+    color: var(--main-text);
+    background-color: var(--white);
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+
+.text-fonts {
+    width: 100%;
+    font-size: var(--text-size-main);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: var(--paddings);
+    padding-bottom: var(--paddings);
+    flex-direction: column;
+}
+
+.text-fonts h2{
+    font-size: var(--big-text-size-main);
+}
+
+.spacing {
+    height: 100px;
+}
+
+.spacing-containing {
+    height: 100px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Header */
+header .content {
+    width: 100%;
+    height: 100px;
+
+    background-color: var(--white);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: var(--main-text);
+    text-decoration: none;
+}
+
+#header-settings {
+    width: 30%;
+
+    font-size: var(--text-size-main);
+
+    display: flex;
+    justify-content: flex-start;
+}
+#header-settings #header-language-selector {
+    width: 20%;
+    height: 25px;
+    padding-left: 2%;
+
+    background-color: var(--header-settings-language-selector-background);
+
+    border-top-right-radius: var(--header-setting-language-selector-radius);
+    border-bottom-right-radius: var(--header-setting-language-selector-radius);
+
+    display: flex;
+    align-items: center;
+}
+
+#header-logo {
+    width: 40%;
+
+    font-size: 35px;
+    font-weight: 600;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-other {
+    width: 30%;
+
+    font-size: var(--text-size-main);
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#header-other #header-contact button {
+    width: 100%;
+    height: 50px;
+
+    font-size: var(--text-size-main);
+    color: var(--header-other-contact-color);
+    background: var(--header-other-contact-background);
+}
+
+
+
+/* Projects Window */
+#Projects .content {
+    width: 100%;
+    height: 750px; 
+
+    background-image: url(Images/Projects/DriveWayAndGarageHouse.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr 1fr 1fr;
+    grid-template-rows: 1.2fr 1fr .5fr 1fr .5fr 1fr 1fr
+}
+
+#Projects #see-projects-text {
+    width: 100%;
+    height: 100%;
+
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    text-align: center;
+    color: var(--white);
+    font-size: var(--projects-text-size-main);
+}
+#Projects #see-projects-text-last {
+    font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+#Projects #see-projects-button {
+    width: 100%;
+    height: 100%;
+    
+    grid-column-start:4;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+
+    border: none;
+    border-radius: var(--border-radius);
+
+    text-align: center;
+    font-size: var(--projects-text-size-button);
+    font-weight: 500;
+
+    box-shadow: 0px 0px 10px var(--black);
+    transition: box-shadow .4s ease-in-out, font-size .4s ease-in-out;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Projects #see-projects-button:hover {
+    box-shadow: 0px 0px 28px var(--black);
+    font-size: 30px;
+}
+
+
+.text-fonts {
+    width: 100%;
+    font-size: var(--text-size-main);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: var(--paddings);
+    padding-bottom: var(--paddings);
+    flex-direction: column;
+}
+.text-fonts h2 {
+    font-size: var(--big-text-size-main);
+}
+
+
+/* About */
+#About-image-after .content {
+    width: 100%;
+    height: 350px;
+    background-image: url(Images/Projects/HouseEnter.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+/* Services */
+.services-row {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.services {
+    margin: 2px;
+    border: 1px solid var(--black);
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 1 20%;
+    transition: flex .4s ease;
+}
+
+.services:hover {
+    flex: .01 .01 50%;  
+}
+
+
+
+
+
+
+
+
+
+
+/* Contact */
+#Contact {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+}
+
+#Contact .content{
+    width: var(--max-width);
+    height: 850px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Contact form {
+    width: 95%;
+    height: 100%;
+
+    display: grid;
+    gap: 20px;
+    box-sizing: border-box;
+    grid-template-rows: 30% 12% 12% 12% 28% 6%;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    "title title"
+    "name name"
+    "email phone"
+    "service service"
+    "description description"
+    "submit submit";
+}
+
+#contact-title {
+    grid-area: title;
+
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+#full-name-container {
+    grid-area: name;
+
+    width: 100%;
+    padding-left: var(--padding-left-contact);
+
+    background-color: var(--grey);
+    border: 3px solid var(--grey-darker);
+    border-radius: var(--border-radius);
+
+    display: flex;
+    flex-direction: column;
+} #full-name-container label {
+    width: 100%;
+    height: 20%;
+
+    font-size: 12px;
+    font-weight: bolder;
+} #full-name-container input {
+    width: 100%;
+    height: 45%;
+
+    font-size: 20px;
+
+    border: none;
+    background: var(--grey);
+} #full-name-container input::placeholder {
+    color: grey;
+    opacity: .35;
+    font-size: 20px;
+    font-weight: 600;
+} #full-name-container input:focus {
+    outline: none;
+    font-size: 20px;
+    opacity: 1;
+    color: var(--black);
+}
+
+#email-container {
+    grid-area: email;
+
+    width: 100%;
+    padding-left: var(--padding-left-contact);
+
+    background-color: var(--grey);
+    border: 3px solid var(--grey-darker);
+    border-radius: var(--border-radius);
+
+    display: flex;
+    flex-direction: column;
+} #email-container label {
+    width: 100%;
+    height: 20%;
+
+    font-size: 12px;
+    font-weight: bolder;
+} #email-container input {
+    width: 100%;
+    height: 45%;
+
+    font-size: 20px;
+
+    border: none;
+    background: var(--grey);
+} #email-container input::placeholder {
+    color: grey;
+    opacity: .35;
+    font-size: 20px;
+    font-weight: 600;
+} #email-container input:focus {
+    outline: none;
+    font-size: 20px;
+    opacity: 1;
+    color: var(--black);
+}
+
+#phone-number-container {
+    grid-area: phone;
+
+    width: 100%;
+    padding-left: var(--padding-left-contact);
+
+    background-color: var(--grey);
+    border: 3px solid var(--grey-darker);
+    border-radius: var(--border-radius);
+
+    display: flex;
+    flex-direction: column;
+} #phone-number-container label {
+    width: 100%;
+    height: 20%;
+
+    font-size: 12px;
+    font-weight: bolder;
+} #phone-number-container input {
+    width: 100%;
+    height: 45%;
+
+    font-size: 20px;
+
+    border: none;
+    background: var(--grey);
+} #phone-number-container input::placeholder {
+    color: grey;
+    opacity: .35;
+    font-size: 20px;
+    font-weight: 600;
+} #phone-number-container input:focus {
+    outline: none;
+    font-size: 20px;
+    opacity: 1;
+    color: var(--black);
+}
+
+#service-chose-container {
+    grid-area: service;
+
+    width: 100%;
+    padding-left: var(--padding-left-contact);
+
+    background-color: var(--grey);
+    border: 3px solid var(--grey-darker);
+    border-radius: var(--border-radius);
+
+    display: flex;
+    flex-direction: column;
+} #service-chose-container label {
+    width: 100%;
+    height: 20%;
+
+    font-size: 12px;
+    font-weight: bolder;
+} #service-chose-container input {
+    width: 100%;
+    height: 45%;
+
+    font-size: 20px;
+
+    border: none;
+    background: var(--grey);
+} #service-chose-container input::placeholder {
+    color: grey;
+    opacity: .35;
+    font-size: 20px;
+    font-weight: 600;
+} #service-chose-container input:focus {
+    outline: none;
+    font-size: 20px;
+    opacity: 1;
+    color: var(--black);
+}
+
+#description-project-container {
+    grid-area: description;
+
+    width: 100%;
+    padding-left: var(--padding-left-contact);
+
+    background-color: var(--white);
+    border: 3px solid var(--grey-darker);
+    border-radius: var(--border-radius);
+
+    display: flex;
+    flex-direction: column;
+} #description-project-container label {
+    width: 100%;
+    height: 20%;
+
+    font-size: 12px;
+    font-weight: bolder;
+} #description-project-container textarea {
+    width: 100%;
+    height: 45%;
+
+    font-size: 20px;
+
+    border: none;
+    background: var(--white);
+} #description-project-container textarea::placeholder {
+    color: grey;
+    opacity: .35;
+    font-size: 20px;
+    font-weight: 600;
+} #description-project-container textarea:focus {
+    outline: none;
+    font-size: 20px;
+    opacity: 1;
+    color: var(--black);
+}
+
+#form-submit {
+    grid-area: submit;
+
+    height: 100%;
+    width: 100%;
+
+    background: var(--black);
+    color: var(--white);
+
+    border: 1px solid var(--black);
+    border-radius: 35px
+}
+
+
+
+
+
+
+
+
+
+
+/* footer */
+footer .content {
+    width: 100%;
+    height: 300px;
+    background-color: var(--black);
+}
